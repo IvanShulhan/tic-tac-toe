@@ -1,10 +1,9 @@
-import TicTacToe from "./TickTacToe";
-import TickTacToeCompPlay from "./TickTacToeCompPlay";
+
+import TickTacToeCompPlay from "./components/TickTacToe";
 
 function App() {
   return (
     <div className="App">
-        <TicTacToe />
         <TickTacToeCompPlay />
     </div>
   );
