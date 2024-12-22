@@ -7,6 +7,6 @@ type ButtonProps = {
 
 export const Button: FC<ButtonProps> = ({ children, onClick }) => (
     <button onClick={onClick} className="button">
-        {children ? 'Play Again' : 'Restart Game'}
+        {children}
     </button>
 )
