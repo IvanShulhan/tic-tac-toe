@@ -1,10 +1,10 @@
+import {TicTacToe} from "./components/TickTacToe";
 
-import TickTacToeCompPlay from "./components/TickTacToe";
 
 function App() {
   return (
     <div className="App">
-        <TickTacToeCompPlay />
+        <TicTacToe />
     </div>
   );
 }

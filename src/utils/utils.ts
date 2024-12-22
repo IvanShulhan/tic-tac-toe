@@ -1,4 +1,6 @@
-export const checkWinner = (board, player, size) => {
+import {Player} from "../components/TickTacToe";
+
+export const checkWinner = (board: string[][], player: Player, size: number): { won: boolean, cells: number[][] } => {
     for (let row = 0; row < size; row++) {
         if (board[row].every(cell => cell === player)) {
             return { won: true, cells: board[row].map((_, col) => [row, col]) };
@@ -25,8 +27,8 @@ export const checkWinner = (board, player, size) => {
     return { won: false, cells: [] };
 };
 
-export const getAvailableCells = (board) => {
-    const cells = [];
+export const getAvailableCells = (board: string[][]): [number, number][] => {
+    const cells: [number, number][]  = [];
     board.forEach((row, rowIndex) =>
         row.forEach((cell, colIndex) => {
             if (!cell) cells.push([rowIndex, colIndex]);
